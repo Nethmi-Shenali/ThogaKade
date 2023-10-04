@@ -1,0 +1,12 @@
+<form [formGroup]="customerForm" (ngSubmit)="uploadData()">
+  <div class="mb-3 col-4">
+    <mat-form-field class="full-width">
+      <mat-label>Customer Id</mat-label>
+      <input formControlName="id" matInput placeholder="C-001" type="text">
+      <mat-error>Customer id is required..</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="mb-3">
+    <button [disabled]="customerForm.invalid" mat-raised-button color="primary" type="submit">Delete Customer</button>
+  </div>
+</form>
